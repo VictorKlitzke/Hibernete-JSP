@@ -25,9 +25,9 @@ public class Pesquisar extends ConsultarTest {
 
     Pedido pedido = new Pedido();
 
-    pedido.setStatus(StatusPedido.CANCELADO);
+    pedido.setStatus(StatusPedido.AGUARDANDO);
 
-    if (StatusPedido.CANCELADO != StatusPedido.CANCELADO) {
+    if (StatusPedido.AGUARDANDO != StatusPedido.AGUARDANDO) {
       System.out.println("Não é possivel fazer a inserção: " + pedido.getDescricao());
     } else {
 
