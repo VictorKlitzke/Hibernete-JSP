@@ -36,6 +36,9 @@ public class Pedido {
   @OneToMany(mappedBy = "pedido")
   private List<ItemsPedido> itens;
 
+  @Column(name = "data_pedido")
+  private LocalDateTime dataPedido;
+
   public List<ItemsPedido> getItens() {
     return itens;
   }
@@ -43,9 +46,6 @@ public class Pedido {
   public void setItens(List<ItemsPedido> itens) {
     this.itens = itens;
   }
-
-  @Column(name = "data_pedido")
-  private LocalDateTime dataPedido;
 
   public LocalDateTime getDataPedido() {
     return dataPedido;

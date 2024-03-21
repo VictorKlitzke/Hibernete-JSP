@@ -37,4 +37,12 @@ public class Cliente {
   public void setNome(String nome) {
     Nome = nome;
   }
+
+  public List<Pedido> getPedidos() {
+    return pedidos;
+  }
+
+  public void setPedidos(List<Pedido> pedidos) {
+    this.pedidos = pedidos;
+  }
 }

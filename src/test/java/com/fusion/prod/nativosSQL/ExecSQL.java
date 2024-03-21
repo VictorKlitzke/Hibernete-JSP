@@ -13,7 +13,7 @@ public class ExecSQL extends ConsultarTest {
   @Test
   public void SQLCliente() {
 
-    String sql = "SELECT * FROM " + "items_pedidos";
+    String sql = "SELECT it.id AS item_id, p.id AS produto_id, p.nome AS produto_nome FROM items_pedido it INNER JOIN produto p ON it.produto_id = p.id";
     Query query = entityManager.createNativeQuery(sql);
 
     List<Object[]> lista = query.getResultList();

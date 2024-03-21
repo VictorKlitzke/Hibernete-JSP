@@ -48,5 +48,4 @@ public class ChaveCompostaTest extends ConsultarTest {
     Assert.assertFalse(pedidoVerfica.getItens().isEmpty());
 
   }
-
 }
