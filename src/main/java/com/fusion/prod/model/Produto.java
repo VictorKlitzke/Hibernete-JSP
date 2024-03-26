@@ -1,6 +1,7 @@
 package com.fusion.prod.model;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,6 +22,16 @@ public class Produto {
   private BigDecimal preco;
 
   private String descricao;
+
+  private LocalDateTime datatime;
+
+  public LocalDateTime getDatatime() {
+    return datatime;
+  }
+
+  public void setDatatime(LocalDateTime datatime) {
+    this.datatime = datatime;
+  }
 
   public String getDescricao() {
     return descricao;

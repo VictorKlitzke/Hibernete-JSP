@@ -20,11 +20,87 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.32</version>
-      <scope>provided</scope>
+      <groupId>io.github.portlek</groupId>
+      <artifactId>serializable</artifactId>
+      <version>2.0.0</version>
     </dependency>
+
+
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus</artifactId>
+      <version>17</version>
+      <type>pom</type>
+    </dependency>
+
+    <dependency>
+      <groupId>nz.net.ultraq.thymeleaf</groupId>
+      <artifactId>thymeleaf-layout-dialect</artifactId>
+      <version>3.3.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>nz.net.ultraq.thymeleaf</groupId>
+      <artifactId>thymeleaf-template-servlet</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>6.4.4.Final</version>
+      <type>pom</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.thymeleaf</groupId>
+      <artifactId>thymeleaf-spring5</artifactId>
+      <version>3.0.12.RELEASE</version>
+    </dependency>
+  
+    <dependency>
+      <groupId>org.thymeleaf</groupId>
+      <artifactId>thymeleaf</artifactId>
+      <version>3.0.12.RELEASE</version> 
+    </dependency>  
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>5.3.14</version>
+    </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-orm</artifactId>
+        <version>5.3.14</version>
+      </dependency>
+    
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>5.3.14</version>
+      </dependency>
+    
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+          <version>5.3.14</version>
+      </dependency>
+
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>4.0.1</version> 
+        <scope>provided</scope>
+      </dependency>
+    
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.32</version>
+        <scope>provided</scope>
+      </dependency>
       
       <dependency>
         <groupId>org.hibernate</groupId>
@@ -64,6 +140,18 @@
         <version>5.4.4.Final</version>
       </dependency>
 
+    <dependency>
+      <groupId>org.hawkular.commons</groupId>
+      <artifactId>hawkular-tenant-jaxrs-filter</artifactId>
+      <version>0.9.8.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.glassfish.jersey.containers</groupId>
+      <artifactId>jersey-container-servlet</artifactId>
+      <version>2.35</version>
+    </dependency>
+  
   </dependencies>
 
   <build>
@@ -109,10 +197,8 @@
     </pluginManagement>
   </build>
 
-
-  <dependencyManagement>
-  
-   <dependencies> 
+<dependencyManagement>
+  <dependencies>
 
     <dependency>
       <groupId>org.springframework</groupId>
@@ -144,7 +230,7 @@
       <artifactId>spring</artifactId>
       <version>5.3.33</version>
       <type>pom</type>
-    </dependency>  
+    </dependency>
 
     <dependency>
     <groupId>org.eclipse.jetty</groupId>
@@ -192,6 +278,6 @@
       <version>3.2.4</version>
     </dependency>
     
-   </dependencies>
-  </dependencyManagement>
+  </dependencies>
+</dependencyManagement>
 </project>

@@ -17,7 +17,7 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 
-import com.fusion.prod.hibernate.TenantFilter;
+// import com.fusion.prod.hibernate.TenantFilter;
 
 public class InicializadorSpringWeb implements WebApplicationInitializer {
 
@@ -41,8 +41,7 @@ public class InicializadorSpringWeb implements WebApplicationInitializer {
         characterEncodingFilter.setAsyncSupported(true);
         characterEncodingFilter.addMappingForServletNames(dispatcherTypes(), false, "dispatcher");
 
-        FilterRegistration.Dynamic tenantFilter = servletContext
-                .addFilter("tenantFilter", tenantFilter());
+        FilterRegistration.Dynamic tenantFilter = servletContext.addFilter("tenantFilter", "TenantFilter");
         tenantFilter.setAsyncSupported(true);
         tenantFilter.addMappingForServletNames(dispatcherTypes(), false, "dispatcher");
 
@@ -54,10 +53,6 @@ public class InicializadorSpringWeb implements WebApplicationInitializer {
 
     private DispatcherServlet dispatcherServlet(WebApplicationContext applicationContext) {
         return new DispatcherServlet(applicationContext);
-    }
-
-    private TenantFilter tenantFilter() {
-        return new TenantFilter();
     }
 
     private CharacterEncodingFilter characterEncodingFilter() {
